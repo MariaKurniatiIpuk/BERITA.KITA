@@ -1,0 +1,763 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-content {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #d71920;
+}
+
+.logo h1 span {
+    color: #111;
+}
+
+.logo p {
+    color: #777;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.tanggal {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 16px 17px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #d71920;
+}
+
+.menu-btn {
+    display: none;
+    background: #d71920;
+    border: none;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   BREAKING NEWS
+========================================================= */
+
+.breaking {
+    background: #d71920;
+    color: #fff;
+}
+
+.breaking-content {
+    display: flex;
+    align-items: center;
+}
+
+.breaking strong {
+    background: #111;
+    padding: 9px 15px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.breaking marquee {
+    padding: 9px 12px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    margin: 30px 0;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.hero-image {
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
+.hero-text {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 14px 0;
+}
+
+
+/* =========================================================
+   KATEGORI
+========================================================= */
+
+.kategori {
+    display: inline-block;
+    width: fit-content;
+    background: #d71920;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.kategori.pendidikan {
+    background: #1877c9;
+}
+
+.kategori.nasional {
+    background: #333;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    margin: 50px 0;
+}
+
+.section-title {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    display: inline-block;
+}
+
+.section-title span {
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #d71920;
+    margin-top: 7px;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   NEWS CARD
+========================================================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.card > a {
+    display: block;
+    overflow: hidden;
+}
+
+.card > a img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.card > a:hover img {
+    transform: scale(1.04);
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 11px 0;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 14px;
+}
+
+.meta {
+    font-size: 12px !important;
+    color: #888 !important;
+    margin-bottom: 9px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #d71920;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+    background: #d71920;
+    color: #fff;
+    padding: 11px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a90000;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ARTIKEL LIST
+========================================================= */
+
+.article-list {
+    display: grid;
+    gap: 20px;
+}
+
+.article-list article {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.article-list h3 {
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+
+/* =========================================================
+   HALAMAN DETAIL BERITA
+========================================================= */
+
+.detail-berita {
+    max-width: 880px;
+    background: #fff;
+    margin: 35px auto;
+    padding: 35px 42px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    overflow-wrap: break-word;
+}
+
+.detail-berita h1 {
+    font-size: 36px;
+    line-height: 1.28;
+    margin: 14px 0 10px;
+    color: #171717;
+}
+
+.detail-meta {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   GAMBAR ARTIKEL
+========================================================= */
+
+/*
+   Gambar dibuat lebih kecil dan proporsional.
+   Tidak lagi memenuhi seluruh layar.
+*/
+
+.detail-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    height: 360px;
+
+    object-fit: cover;
+
+    margin: 20px auto 28px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.detail-image:hover {
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   ISI ARTIKEL
+========================================================= */
+
+.detail-berita p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 18px;
+    overflow-wrap: break-word;
+}
+
+.detail-berita h2 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #222;
+}
+
+.detail-berita blockquote {
+    margin: 25px 0;
+    padding: 18px 22px;
+    background: #f5f5f5;
+    border-left: 5px solid #d71920;
+    font-size: 17px;
+    font-style: italic;
+    color: #444;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-berita {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    max-height: 430px;
+    margin: 20px auto;
+    background: #000;
+    border-radius: 8px;
+}
+
+.keterangan-video {
+    color: #777 !important;
+    font-size: 13px !important;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TENTANG
+========================================================= */
+
+.about-box {
+    background: #fff;
+    padding: 28px;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #d71920;
+}
+
+.about-box h3 {
+    font-size: 23px;
+    margin-bottom: 13px;
+    color: #222;
+}
+
+.about-box p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   KONTAK
+========================================================= */
+
+.contact-box {
+    background: #fff;
+    padding: 28px;
+    border-left: 5px solid #d71920;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contact-box h3 {
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin-bottom: 9px;
+    color: #555;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.footer-content {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-content h2 {
+    color: #d71920;
+    margin-bottom: 10px;
+}
+
+.footer-content h2 span {
+    color: #fff;
+}
+
+.footer-content h3 {
+    margin-bottom: 14px;
+}
+
+.footer-content a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-content a:hover {
+    color: #fff;
+}
+
+.footer-content p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 18px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-berita {
+        max-width: 850px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        min-height: auto;
+        padding: 18px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .logo h1 {
+        font-size: 27px;
+    }
+
+    .tanggal {
+        font-size: 12px;
+    }
+
+
+    /* NAVBAR */
+
+    .menu-btn {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .nav-content {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 13px 15px;
+    }
+
+
+    /* BREAKING */
+
+    .breaking-content {
+        width: 100%;
+    }
+
+    .breaking strong {
+        font-size: 11px;
+        padding: 9px 10px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        margin: 22px 0;
+    }
+
+    .hero-image img {
+        height: 230px;
+    }
+
+    .hero-text {
+        padding: 22px;
+    }
+
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+
+    /* CARD */
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card > a img {
+        height: 210px;
+    }
+
+
+    /* ARTIKEL */
+
+    .detail-berita {
+        width: 100%;
+        margin: 22px auto;
+        padding: 22px 18px;
+        border-radius: 8px;
+    }
+
+    .detail-berita h1 {
+        font-size: 28px;
+    }
+
+    .detail-berita h2 {
+        font-size: 21px;
+    }
+
+    .detail-berita p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    /* GAMBAR ARTIKEL DI HP */
+
+    .detail-image {
+        width: 100%;
+        max-width: 100%;
+        height: 230px;
+        margin: 18px auto 24px;
+    }
+
+
+    /* VIDEO */
+
+    .video-berita {
+        max-height: 300px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+}
